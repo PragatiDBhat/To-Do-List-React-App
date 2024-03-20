@@ -8,7 +8,8 @@ app.use(cors(
     {
         origin: ['https://todolistreactfrontend.vercel.app'],
         methods: ['POST','GET','DELETE','PUT'],
-        credentials: true
+        credentials: false,
+        allowedHeaders: ['Content-Type']
     }
 ))
 app.use(express.json())
