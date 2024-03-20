@@ -100,7 +100,8 @@ body {
 }
 
 .home {
-    background-color: rgba(234, 234, 225, 0.3);    padding: 20px;
+    background-color: rgba(234, 234, 225, 0.3);    
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,12 +127,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 75%;
     margin-bottom: 10px;
     padding: 20px;
     border-radius: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    bbox-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .checkbox {
