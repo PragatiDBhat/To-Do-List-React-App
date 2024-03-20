@@ -18,7 +18,7 @@ app.use(cors({
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://pragatibhat633:todolist@cluster0.sdbidum.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 // Define routes
 app.get('/get', async (req, res) => {
