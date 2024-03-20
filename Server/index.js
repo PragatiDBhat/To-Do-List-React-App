@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4040;
 
 // CORS middleware setup
 app.use(cors({
-    origin: ['*'],
+    origin: ['https://65faf8783f4cc90365eb8ac6--todolistfrontendreact.netlify.app'],
     methods: ['POST', 'GET', 'DELETE', 'PUT','HEAD','OPTIONS'],
     credentials: false,
     allowedHeaders: ['Content-Type']
