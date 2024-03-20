@@ -164,7 +164,7 @@ body {
 }
 
 .icon:hover {
-    color: #f00; /* change to your desired hover color */
+    color: purple;; /* change to your desired hover color */
 }
 
 .create_form {
