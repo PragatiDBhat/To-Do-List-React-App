@@ -137,12 +137,13 @@ body {
 .checkbox {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .checkbox .icon {
     font-size: 24px;
     margin-right: 10px;
+    color: #333;
 }
 
 .checkbox p {
