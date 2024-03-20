@@ -45,6 +45,7 @@ export default function Home() {
     }
 
     return (
+        <center>
         <div className="home">
             <h2><strong>To Do List</strong></h2>
             <Create onAdd={handleAdd} />
@@ -66,5 +67,6 @@ export default function Home() {
                 ))
             )}
         </div>
+            </center>
     );
 }
