@@ -3,6 +3,7 @@ const mongoose=require('mongoose')
 const cors=require('cors')
 const TodoModel=require('./Models/Todo')
 const app=express()
+const PORT = process.env.PORT || 3000;
 app.use(cors(
     {
         origin: ['https://todolistreactfrontend.vercel.app'],
@@ -38,6 +39,6 @@ app.post('/add',(req,res)=>{
     }).then(result=>res.json(result))
     .catch(err=>res.json(err))
 })
-app.listen(4001,()=>{
+app.listen(PORT,()=>{
     console.log("Server is running")
 })
