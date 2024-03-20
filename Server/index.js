@@ -5,7 +5,7 @@ const TodoModel=require('./Models/Todo')
 const app=express()
 app.use(cors(
     {
-        origin: ['https://deploytodolistmern.vercel.app'],
+        origin: [''],
         methods: ['POST','GET','DELETE','PUT'],
         credentials: true
     }
