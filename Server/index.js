@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // CORS middleware setup
 app.use(cors({
     origin: 'https://todolistreactfrontend.vercel.app',
-    methods: ['POST', 'GET', 'DELETE', 'PUT'],
+    methods: ['POST', 'GET', 'DELETE', 'PUT','HEAD'],
     credentials: false,
     allowedHeaders: ['Content-Type']
 }));
