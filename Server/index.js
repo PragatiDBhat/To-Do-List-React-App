@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4040;
 
 // CORS middleware setup
 app.use(cors({
-    origin: ['https://to-do-list-react-app-rd90.onrender.com'],
+    origin: ['https://to-do-list-react-app-ztx3.onrender.com'],
     methods: ['POST', 'GET', 'DELETE', 'PUT','HEAD','OPTIONS'],
     credentials: false,
     allowedHeaders: ['Content-Type']
