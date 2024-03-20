@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { useState } from 'react';
 
 export default function Create() {
   const [task, setTask] = useState('');
 
   const handleAdd = () => {
-    axios.post('https://todolistreactbackend.vercel.app/add', { task: task })
-      .then(result => {location.reload()})
-      .catch(err => console.log(err));
+    axios.post('https://todolistreactbackend.vercel.app/add', { task }, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      withCredentials: false
+    })
+    .then(result => {
+      console.log(result);
+      location.reload();
+    })
+    .catch(err => console.log(err));
   };
 
-  const handleChange = (e) => {  // Define handleChange function to capture the event
-    setTask(e.target.value); // Update the task state with the value of the input field
+  const handleChange = (e) => {
+    setTask(e.target.value);
   };
 
   return (
@@ -21,10 +28,12 @@ export default function Create() {
         <input
           type="text"
           placeholder="Enter Task"
-          onChange={handleChange} // Pass the event to handleChange function
+          value={task} // Use value attribute to set the value of the input field
+          onChange={handleChange}
         />
         <button type="button" onClick={handleAdd}>ADD</button>
       </form>
     </div>
   );
 }
+
