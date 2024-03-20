@@ -13,7 +13,7 @@ export default function Home() {
     }, []);
 
     const handleEdit = (id) => {
-        axios.put('https://todolistreactbackend.vercel.app/update/${id}')
+        axios.put(`https://todolistreactbackend.vercel.app/update/${id}`)
             .then(result => { 
                 console.log(result);
                 location.reload(); 
@@ -22,7 +22,7 @@ export default function Home() {
     }
 
     const handleDelete = (id) => {
-        axios.delete('https://todolistreactbackend.vercel.app/delete/${id}')
+        axios.delete(`https://todolistreactbackend.vercel.app/delete/${id}`)
             .then(result => { 
                 console.log(result);
                 location.reload(); 
