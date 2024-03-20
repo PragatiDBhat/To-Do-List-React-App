@@ -3,11 +3,16 @@ const mongoose=require('mongoose')
 const cors=require('cors')
 const TodoModel=require('./Models/Todo')
 const app=express()
-app.use(cors())
+app.use(cors(
+    {
+        origin: ['https://deploytodolistmern.vercel.app'],
+        methods: ['POST','GET','DELETE','PUT'],
+        credentials: true
+    }
+))
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://pragatibhat633:todolist@cluster0.sdbidum.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-
 app.get('/get',(req,res)=>{
     TodoModel.find()
     .then(result=>res.json(result))
@@ -33,6 +38,6 @@ app.post('/add',(req,res)=>{
     }).then(result=>res.json(result))
     .catch(err=>res.json(err))
 })
-app.listen(3001,()=>{
+app.listen(4001,()=>{
     console.log("Server is running")
 })
