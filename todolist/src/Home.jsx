@@ -47,7 +47,7 @@ export default function Home() {
     return (
         <center>
         <div className="home">
-            <h2>To Do List</h2>
+            <h2><strong>To Do List</strong></h2>
             <Create onAdd={handleAdd} />
             {todos.length === 0 ? (
                 <div><h2>No Record</h2></div>

@@ -4,12 +4,12 @@ const cors = require('cors');
 const TodoModel = require('./Models/Todo');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4040;
 
 // CORS middleware setup
 app.use(cors({
-    origin: 'https://todolistreactfrontend.vercel.app',
-    methods: ['POST', 'GET', 'DELETE', 'PUT'],
+    origin: ['https://todolistfrontendreact.netlify.app'],
+    methods: ['POST', 'GET', 'DELETE', 'PUT','HEAD','OPTIONS'],
     credentials: false,
     allowedHeaders: ['Content-Type']
 }));
